@@ -1,6 +1,6 @@
 /**
 *
-* PostSearch
+* Search
 *
 */
 
@@ -34,11 +34,11 @@ input {
 
 `;
 
-class PostSearch extends React.Component {
+class Search extends React.Component {
   state = { textValue: '' };
 
   componentWillMount() {
-    this.setState({ textValue: this.props.children });
+    this.setState({ textValue: this.props.children[0].props.value });
   }
 
   componentDidMount() {
@@ -109,8 +109,8 @@ class PostSearch extends React.Component {
   }
 }
 
-PostSearch.propTypes = {
-  children: React.PropTypes.node,
+Search.propTypes = {
+  children: React.PropTypes.object,
 };
 
-export default PostSearch;
+export default Search;

@@ -88,14 +88,6 @@ class Tangent extends React.Component {
               }
             />
           </defs>
-          {/*<text>
-            <textPath
-              href={`#${this.state.id}`}
-              style={{ filter: 'url(#shadow)', fill: 'white' }}
-            >
-              {this.props.children[0].props.value}
-            </textPath>
-          </text>*/}
           <text>
             <textPath
               href={`#${this.state.id}`}

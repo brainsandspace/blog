@@ -27,11 +27,6 @@ import styled from 'styled-components';
 const Wrapper = styled.div`
 `;
 
-const UL = styled.ul`
-
-
-`;
-
 export class Posts extends React.Component {
   render() {
     return (
@@ -62,7 +57,6 @@ Posts.propTypes = {
   onClickPost: PropTypes.func.isRequired,
   currentNormatives: PropTypes.array,
   children: PropTypes.node,
-  // dispatch: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = createStructuredSelector({
@@ -72,7 +66,7 @@ const mapStateToProps = createStructuredSelector({
 
 function mapDispatchToProps(dispatch) {
   return {
-    onClickPost: (slug, date) => dispatch(getPost(dispatch, slug, date)), //dispatch(push(`/posts/${filename}`)),
+    onClickPost: (slug, date) => dispatch(getPost(dispatch, slug, date)),
   };
 }
 

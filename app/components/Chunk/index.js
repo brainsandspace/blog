@@ -13,6 +13,7 @@ import Ellipsis from 'components/Ellipsis';
 import Tangent from 'components/Tangent';
 import Normative from 'containers/Normative';
 import Code from 'components/Code';
+import Search from 'components/Search';
 
 function Chunk({ type, children, ...props }) {
   let Tag, href, src, alt;
@@ -30,11 +31,15 @@ function Chunk({ type, children, ...props }) {
       Tag = Tangent;
       break;
 
+    case 'search':
+      Tag = Search;
+      break;
+
     case 'normative':
       Tag = Normative;
       break;
-
     /* 🔝 Custom Elements Above 🔝 */
+
 
     case 'heading':
       Tag = `h${props.depth}`;
@@ -55,7 +60,6 @@ function Chunk({ type, children, ...props }) {
     case 'inlineCode':
       Tag = Code;
       break;
-
     //  TODO what is delete
     case 'delete':
     case 'strong':
@@ -91,7 +95,7 @@ function Chunk({ type, children, ...props }) {
       break;
 
     default:
-      // debugger;
+      debugger;
       Tag = 'span';
       break;
 

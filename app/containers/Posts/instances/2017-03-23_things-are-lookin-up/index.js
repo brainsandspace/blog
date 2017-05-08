@@ -13,7 +13,7 @@ import PostP from 'components/PostP';
 import PostHeading from 'components/PostHeading';
 import PostTitle from 'components/PostTitle';
 import PostDate from 'components/PostDate';
-import PostSearch from 'components/PostSearch';
+import Search from 'components/Search';
 
 import postInstances from '../../postInstances';
 
@@ -51,7 +51,7 @@ export class WoopWoop extends React.Component {
 
           </PostP>
 
-          <PostSearch>graphics card performance check ubuntu</PostSearch>
+          <Search>graphics card performance check ubuntu</Search>
 
           <PostP>
             You haven't the least idea how much time making that search bar took me. And it isn't done. But it's mostly done. Kinda. It isn't functional yet. Like it wont Google Things. You

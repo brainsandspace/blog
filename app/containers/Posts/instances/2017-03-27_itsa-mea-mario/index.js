@@ -13,7 +13,7 @@ import PostP from 'components/PostP';
 import PostHeading from 'components/PostHeading';
 import PostTitle from 'components/PostTitle';
 import PostDate from 'components/PostDate';
-import PostSearch from 'components/PostSearch';
+import Search from 'components/Search';
 import Code from 'components/Code';
 import Revise from 'components/Revise';
 
@@ -56,7 +56,7 @@ export class BrokenPipes extends React.Component {
             <i>Isn't that wonderful?</i> Here's how I found the answer.
           </PostP>
 
-          <PostSearch>broken pipe freezes terminal</PostSearch>
+          <Search>broken pipe freezes terminal</Search>
 
           <PostP>
             And the answer was from this <a

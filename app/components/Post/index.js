@@ -136,6 +136,18 @@ const mouseLeaveNormative = id => {
  * @extends {Component}
  */
 class Post extends Component {
+  constructor() {
+    super();
+    this.state = { innerText: null };
+  }
+
+  componentDidMount() {
+    const postEl = document.querySelector('.post');
+    this.setState({
+      innerText: postEl ? postEl.innerText : null,
+    });
+  }
+
   toggleMetaColumn(evt) {
     evt.preventDefault();
     this.gridDiv.className = this.gridDiv.className.match('on-screen')
@@ -159,6 +171,12 @@ class Post extends Component {
             >
               {this.props.normatives}
             </NormativesList>
+
+            <div>
+              <p>
+                {JSON.stringify(socrates(this.state.innerText))}
+              </p>
+            </div>
           </section>
 
           <MainColumn>

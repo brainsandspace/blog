@@ -7996,9 +7996,9 @@ which@1.2.x, which@^1.0.5, which@^1.1.1, which@^1.2.10, which@^1.2.11, which@^1.
   dependencies:
     isexe "^2.0.0"
 
-whoa-loader@^0.0.2:
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/whoa-loader/-/whoa-loader-0.0.2.tgz#a8bdd69bc82432aa1e26ff557e0e4bb050a1e4f3"
+whoa-loader@^0.0.3:
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/whoa-loader/-/whoa-loader-0.0.3.tgz#077fd87d1ebb6b21cb76a2b31f657a613242d738"
   dependencies:
     remark "^7.0.0"
     remark-parse "^3.0.0"

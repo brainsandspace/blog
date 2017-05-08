@@ -1,0 +1,49 @@
+/*
+ *
+ * {{ title }}
+ *
+ */
+
+import React from 'react';
+import Helmet from 'react-helmet';
+
+import Post from 'components/Post';
+import PostHeading from 'components/PostHeading';
+import PostTitle from 'components/PostTitle';
+import PostDate from 'components/PostDate';
+import Chunk from 'components/Chunk';
+
+import postInstances from '../../postInstances';
+
+import content from './index.whoa';
+
+const {{ camelCase title }} = () => { 
+    return (
+
+      <Post>
+
+        <Helmet
+          title="{{ titleCase title }}"
+          meta={{curly true}}[
+            {{curly true}} name: 'description', content: 'Description of {{ title }}' {{curly}},
+          ]{{curly}}
+        />
+
+        <PostHeading>
+          <PostTitle>{{ title }}</PostTitle>
+          <PostDate>{{curly true}}postInstances.get('{{ title }}').dates.map((date) => <span key={date}>{{curly true}}date.toDateString(){{curly}}</span>){{curly}}</PostDate>
+        </PostHeading>
+
+        <div className="post-body">
+
+          <Chunk type={content.type}>{content.children}</Chunk>
+        
+        </div>
+
+      </Post>
+    );
+}
+
+{{ camelCase title }}.propTypes = {};
+
+export default {{camelCase title}};

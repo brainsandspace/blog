@@ -10,7 +10,7 @@ export function* defaultSaga() {
 
   // TODO this is probably bad using dispatch in here like this
   dispatch(push({
-    pathname: `/posts/${slug}`,
+    pathname: `/${slug}`,
 
     // Kinda hacky way to pasas this along to the routes.js file
     state: datePrefix,

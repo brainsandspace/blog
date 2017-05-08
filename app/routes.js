@@ -58,7 +58,7 @@ export default function createRoutes(store) {
         {
           // dynamic routes for individual posts
           // Doing this as a child route has the benefit of keeping the Posts layout
-          path: '/posts/:slug',
+          path: '/:slug',
           name: 'post',
           getComponent(nextState, cb) {
             // TODO figure out How well I am actually using code splitting.

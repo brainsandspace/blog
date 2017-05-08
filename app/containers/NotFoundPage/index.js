@@ -12,14 +12,23 @@
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
 
-import messages from './messages';
-
-export default class NotFound extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
+export default class NotFound extends React.PureComponent {
   render() {
     return (
-      <h1>
-        <FormattedMessage {...messages.header} />
-      </h1>
+      <div
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          alignItems: 'center',
+          height: '100vh',
+        }}
+      >
+        <h1 style={{ fontSize: '4rem' }}>
+          4😭4
+        </h1>
+        <p>Either you're lost, or I fucked up.</p>
+      </div>
     );
   }
 }

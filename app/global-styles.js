@@ -1,30 +1,53 @@
 import { injectGlobal } from 'styled-components';
+import ahNatural from 'components/../fonts/ah natural.ttf';
 
-/* eslint no-unused-expressions: 0 */
+// console.log(ahNatural);
+// debugger;
 injectGlobal`
   html,
-  body {
-    height: 100%;
-    width: 100%;
+  body,
+  #app {
+    min-height: 100%;
+    min-width: 100%;
+    padding: 0;
+    margin: 0;
   }
 
   body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: /*Ubuntu,*/ 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    height: 100vh;
   }
 
   body.fontLoaded {
-    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: /*Ubuntu,*/ 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+    font-family: 'ah natural';
   }
 
-  #app {
-    background-color: #fafafa;
-    min-height: 100%;
-    min-width: 100%;
+  .date {
+    font-family: monospace;
+    color: #ccc;
   }
 
   p,
   label {
-    font-family: Georgia, Times, 'Times New Roman', serif;
     line-height: 1.5em;
   }
+
+  ul {
+    margin-top: 0;
+  }
+
+  .hot-take-alert {
+    color: orange;
+  }
+  
+
 `;
+
+// TODO theming
+export const colors = {
+  highlight: '#fbfaa4',
+  text: '#111',
+  inlineBackground: '#f0f0f0',
+};

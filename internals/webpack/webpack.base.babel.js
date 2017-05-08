@@ -3,7 +3,7 @@
  */
 
 const path = require('path');
-const webpack = require('webpack');
+const webpack = require('webpack'); 
 
 module.exports = (options) => ({
   entry: options.entry,
@@ -12,7 +12,12 @@ module.exports = (options) => ({
     publicPath: '/',
   }, options.output), // Merge with env dependent settings
   module: {
-    loaders: [{
+    loaders: [
+      {
+        test: /\.whoah?$/,
+        loaders: ['whoa-loader']
+      },
+      {
       test: /\.js$/, // Transform all .js files required somewhere with Babel
       loader: 'babel-loader',
       exclude: /node_modules/,

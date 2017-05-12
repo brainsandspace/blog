@@ -10,20 +10,11 @@ import styled from 'styled-components';
 const articleMaxWidth = '50rem';
 
 const UL = styled.ul`
-  
-  // display: none;
-  // display: flex;
+  width:100%;
+  display: flex;
   flex-direction: column;
-  grid-template-columns: 1fr;
-  margin-top: 0;
-  list-style: none;
   padding-left: 0;
-  background: $color;
-  transition: 1s;
 
-.folded {
-  transition: 1;
-  grid-row-gap: 20px;
 
   @media(min-width: ${articleMaxWidth}) {
     position: absolute;
@@ -33,12 +24,6 @@ const UL = styled.ul`
       display: none;  
     }
   }
-}
-
-.unfolded {
-  transition: 1s;
-  grid-row-gap: 200px;
-}
 
 li {
   color: steelblue;
@@ -76,35 +61,34 @@ p.date {
 class PostList extends React.Component {
   render() {
     return (
-      <UL className={this.props.folded ? 'folded' : 'unfolded'}>
-        {Array.from(this.props.postInstances).reverse().map(([
-          title,
-          { slug, dates },
-        ]) => (
-          <li tabIndex="O" key={title}>
-            {dates
-              ? <p className="date">
-                  {dates.map(d => (
-                    <span key={`${slug}-${d}`}>{d.toDateString()}</span>
-                  ))}
-                </p>
-              : null}
+      <UL>
+        {Array.from(this.props.postInstances)
+          .reverse()
+          .map(([title, { slug, dates }]) => (
+            <li tabIndex="O" key={title}>
+              {dates
+                ? <p className="date">
+                    {dates.map(d => (
+                      <span key={`${slug}-${d}`}>{d.toDateString()}</span>
+                    ))}
+                  </p>
+                : null}
 
-            <p className="title">
-              <a
-                className="title"
-                onClick={evt => {
-                  evt.preventDefault();
-                  this.props.onClickPost(slug, dates[0]);
-                }}
-                href={slug}
-              >
-                {title}
-              </a>
-            </p>
+              <p className="title">
+                <a
+                  className="title"
+                  onClick={evt => {
+                    evt.preventDefault();
+                    this.props.onClickPost(slug, dates[0]);
+                  }}
+                  href={slug}
+                >
+                  {title}
+                </a>
+              </p>
 
-          </li>
-        ))}
+            </li>
+          ))}
       </UL>
     );
   }

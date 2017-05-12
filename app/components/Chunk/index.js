@@ -40,7 +40,6 @@ function Chunk({ type, children, ...props }) {
       break;
     /* 🔝 Custom Elements Above 🔝 */
 
-
     case 'heading':
       Tag = `h${props.depth}`;
       break;
@@ -68,6 +67,10 @@ function Chunk({ type, children, ...props }) {
 
     case 'emphasis':
       Tag = 'em';
+      break;
+    
+    case 'blockquote':
+      Tag = 'blockquote';
       break;
 
     case 'link':

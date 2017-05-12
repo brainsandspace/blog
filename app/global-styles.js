@@ -1,6 +1,14 @@
 import { injectGlobal } from 'styled-components';
 import ahNatural from 'components/../fonts/ah natural.ttf';
 
+// TODO theming
+export const colors = {
+  accent1: 'firebrick',
+  highlight: '#fbfaa4',
+  text: '#111',
+  inlineBackground: '#f0f0f0',
+};
+
 // console.log(ahNatural);
 // debugger;
 injectGlobal`
@@ -42,12 +50,27 @@ injectGlobal`
     color: orange;
   }
   
+blockquote {
+  border-left: 5px solid ${colors.accent1};
+  padding: 0.5rem;
+  padding-left: 1.5rem;
+  margin: 0 1rem;
+
+  p {
+    margin: 0;
+    margin-top: 0.5rem;
+  }
+
+  &::before {
+    content: '';
+    width: 20px;
+    height: 5px;
+    background: ${colors.accent1};
+    position: absolute;
+    transform: translateX(-1.5rem) translateY(-0.5rem);
+  }
+
+
+}
 
 `;
-
-// TODO theming
-export const colors = {
-  highlight: '#fbfaa4',
-  text: '#111',
-  inlineBackground: '#f0f0f0',
-};

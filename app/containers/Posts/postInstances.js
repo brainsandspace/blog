@@ -91,4 +91,9 @@ postInstances.set('See Slug Slow', {
   dates: [new Date(2017, 4, 6, 5, 8)],
 });
 
+postInstances.set('Incremental Progress', {
+  slug: 'small-steps',
+  dates: [new Date(2017, 4, 8, 3, 18)],
+});
+
 export default postInstances;

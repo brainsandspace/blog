@@ -18,6 +18,7 @@ form {
   display:inline-block;
   width: 100%;
   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
+  margin: 5px 0;
 }
 
 input {
@@ -42,8 +43,6 @@ class Search extends React.Component {
   }
 
   componentDidMount() {
-    document.querySelector('post-search');
-
     this.textInput.select();
   }
 
@@ -80,7 +79,7 @@ class Search extends React.Component {
 
   render() {
     return (
-      <Wrapper className="post-search">
+      <Wrapper>
         <form
           onSubmit={evt => {
             this.onSubmit(evt);

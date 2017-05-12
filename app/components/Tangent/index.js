@@ -16,10 +16,11 @@ const Wrapper = styled.span`
   svg {
     position: absolute
     display: inline-block;
-    // z-index: -1;
+    pointer-events: none;
 
     text {
       transform: translateY(1rem);
+      pointer-events: painted;
 
       &:hover {
         fill: red;
@@ -43,11 +44,6 @@ class Tangent extends React.Component {
     const postBody = document
       .querySelector('.post-body')
       .getBoundingClientRect();
-
-    // debugger;//
-    // this.setState({
-    //   straightLength: postBody.right - svgLeft - 100,
-    // });
 
     // this part totally doesn't work. I am trying to not have overflow x
     console.log(

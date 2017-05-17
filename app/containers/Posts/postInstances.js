@@ -96,4 +96,9 @@ postInstances.set('Incremental Progress', {
   dates: [new Date(2017, 4, 8, 3, 18)],
 });
 
+postInstances.set('We&#x27;re Up All Night To Get Lucky', {
+  slug: 'up-all-night-to-this-song',
+  dates: [new Date(2017, 4, 17, 5, 55)],
+});
+
 export default postInstances;

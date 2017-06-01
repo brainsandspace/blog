@@ -44,6 +44,11 @@ overflow: hidden;
 
 }
 
+// TODO
+.socrates {
+  overflow-x: hidden;
+}
+
 i::before, i::after {
   content: '*';
   color: #ddd;
@@ -172,7 +177,7 @@ class Post extends Component {
               {this.props.normatives}
             </NormativesList>
 
-            <div>
+            <div className="socrates">
               <p>
                 {JSON.stringify(socrates(this.state.innerText))}
               </p>

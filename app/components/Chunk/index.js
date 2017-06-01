@@ -79,9 +79,12 @@ function Chunk({ type, children, ...props }) {
       href = props.url;
       break;
 
+
+      // TODO when you do images, make sure I am doing images right here.
+    case 'imageReference':
     case 'image':
       Tag = 'img';
-      src = props.url;
+      src = props.src || props.url;
       alt = props.alt;
       break;
 
@@ -98,7 +101,6 @@ function Chunk({ type, children, ...props }) {
       break;
 
     default:
-      debugger;
       Tag = 'span';
       break;
 

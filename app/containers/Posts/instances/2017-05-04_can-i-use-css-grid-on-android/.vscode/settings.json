@@ -1,0 +1,6 @@
+// Place your settings in this file to overwrite default and user settings.
+{
+  "workbench.colorTheme": "Default Light+",
+  "editor.fontFamily": "'Helvetica'",
+  "workbench.activityBar.visible": false
+}

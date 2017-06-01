@@ -1,0 +1,12 @@
+// Place your settings in this file to overwrite default and user settings.
+{
+  "workbench.colorTheme": "Quiet Light",
+  "editor.fontFamily": "'aaaaa natural', Helvetica",
+  "editor.cursorBlinking": "phase",
+  "editor.lineNumbers": "off",
+  "editor.selectionHighlight": true,
+  "editor.cursorStyle": "line-thin",
+  "editor.wordWrap": "bounded",
+  "editor.minimap.enabled": false,
+  "editor.glyphMargin": false,
+"editor.fontSize": 48}

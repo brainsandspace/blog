@@ -101,4 +101,9 @@ postInstances.set('We&#x27;re Up All Night To Get Lucky', {
   dates: [new Date(2017, 4, 17, 5, 55)],
 });
 
+postInstances.set('You probably should not bother reading this', {
+  slug: 'o-is-me',
+  dates: [new Date(2017, 4, 31, 5, 42)],
+});
+
 export default postInstances;

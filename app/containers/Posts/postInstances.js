@@ -1,5 +1,5 @@
 /**
- * Be aware teat months go from 0 to 11
+ * Be aware that months go from 0 to 11
  * 
  * TODO proabably use a database. There is a lot of unnecessary repetition going on here.
  * 

@@ -43,7 +43,7 @@ class Search extends React.Component {
   }
 
   componentDidMount() {
-    this.textInput.select();
+    // this.textInput.select();
   }
 
   onChange(evt) {

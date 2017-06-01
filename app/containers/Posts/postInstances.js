@@ -106,4 +106,9 @@ postInstances.set('You probably should not bother reading this', {
   dates: [new Date(2017, 4, 31, 5, 42)],
 });
 
+postInstances.set('Trying Something Out', {
+  slug: 'different-voice',
+  dates: [new Date(2017, 5, 1, 3, 30)],
+});
+
 export default postInstances;

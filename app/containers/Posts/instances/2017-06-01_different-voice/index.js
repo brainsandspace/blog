@@ -1,6 +1,6 @@
 /*
  *
- * {{ title }}
+ * Trying Something Out
  *
  */
 import { mapProps } from 'recompose';

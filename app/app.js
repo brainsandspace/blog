@@ -36,7 +36,7 @@ import 'file-loader?name=[name].[ext]!./.htaccess';
 import configureStore from './store';
 
 // Import i18n messages
-import { translationMessages } from './i18n';
+// import { translationMessages } from './i18n';
 
 // Import CSS reset and Global Styles
 import './global-styles';
@@ -67,7 +67,7 @@ const rootRoute = {
 const render = (messages) => {
   ReactDOM.render(
     <Provider store={store}>
-      <LanguageProvider messages={messages}>
+      {/*<LanguageProvider messages={messages}>*/}
         <Router
           history={history}
           routes={rootRoute}
@@ -77,7 +77,7 @@ const render = (messages) => {
             applyRouterMiddleware(useScroll())
           }
         />
-      </LanguageProvider>
+      {/*</LanguageProvider>*/}
     </Provider>,
     document.getElementById('app')
   );
@@ -87,26 +87,27 @@ const render = (messages) => {
 if (module.hot) {
   // modules.hot.accept does not accept dynamic dependencies,
   // have to be constants at compile-time
-  module.hot.accept('./i18n', () => {
-    render(translationMessages);
-  });
+  // module.hot.accept('./i18n', () => {
+  //   render();
+  // });
+  render();
 }
 
-// Chunked polyfill for browsers without Intl support
-if (!window.Intl) {
-  (new Promise((resolve) => {
-    resolve(import('intl'));
-  }))
-    .then(() => Promise.all([
-      import('intl/locale-data/jsonp/en.js'),
-    ]))
-    .then(() => render(translationMessages))
-    .catch((err) => {
-      throw err;
-    });
-} else {
-  render(translationMessages);
-}
+// // Chunked polyfill for browsers without Intl support
+// if (!window.Intl) {
+//   (new Promise((resolve) => {
+//     resolve(import('intl'));
+//   }))
+//     .then(() => Promise.all([
+//       import('intl/locale-data/jsonp/en.js'),
+//     ]))
+//     .then(() => render(translationMessages))
+//     .catch((err) => {
+//       throw err;
+//     });
+// } else {
+//   render(translationMessages);
+// }
 
 // Install ServiceWorker and AppCache in the end since
 // it's not most important operation and if main code fails,

@@ -2,6 +2,7 @@
 *
 * Tangent
 *
+* A tangent (for now at least), can only contain plain text.
 */
 
 import React from 'react';
@@ -9,6 +10,7 @@ import styled from 'styled-components';
 import shortid from 'shortid';
 
 import Chunk from 'components/Chunk';
+import plainText from 'utils/plainText'
 
 const Wrapper = styled.span`
   display: inline;
@@ -91,7 +93,8 @@ class Tangent extends React.Component {
                 this.textPath = ref;
               }}
             >
-              {this.props.children[0].props.value}
+              {/*{this.props.children[0].props.value}*/}
+              {plainText(this.props.children)}
             </textPath>
           </text>
         </svg>

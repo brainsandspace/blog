@@ -12,6 +12,8 @@ import Chunk from 'components/Chunk';
 import styled from 'styled-components';
 import shortid from 'shortid';
 
+import plainText from 'utils/plainText';
+
 const ADD_NORMATIVE = 'ADD_NORMATIVE';
 export function addNormative(statement, id) {
   return {
@@ -51,7 +53,7 @@ export class Normative extends Component {
 
   componentDidMount() {
     const id = shortid.generate();
-    this.props.addNormative(this.props.children[0].props.value, id);
+    this.props.addNormative(plainText(this.props.children), id);
 
     this.setState({ id });
   }
@@ -64,11 +66,11 @@ export class Normative extends Component {
           this.element = ref;
         }}
       >
-        {this.props.children[0]
-          ? <Chunk type={this.props.children[0].props.type}>
-              {this.props.children[0].props.value}
-            </Chunk>
-          : null}
+        {this.props.children.map(child => (
+          <Chunk type={child.props.type} key={shortid.generate()}>
+            {child.props.children}
+          </Chunk>
+        ))}
       </Span>
     );
   }

@@ -111,4 +111,9 @@ postInstances.set('Trying Something Out', {
   dates: [new Date(2017, 5, 1, 3, 30)],
 });
 
+postInstances.set('Flagship', {
+  slug: 'flagship-whoa',
+  dates: [new Date(2017, 5, 15, 8, 3)],
+});
+
 export default postInstances;

@@ -1,3 +1,5 @@
+![warning](https://render.bitstrips.com/v2/cpanel/10099542-261090531_1-s4-v1.png?transparent=1&palette=1)
+
 <img src="https://raw.githubusercontent.com/react-boilerplate/react-boilerplate-brand/master/assets/banner-metal-optimized.jpg" alt="react boilerplate banner" align="center" />
 
 <br />
